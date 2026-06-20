@@ -29,7 +29,9 @@ jobs:
 
       - name: Build with Gradle Wrapper
         working-directory: java_backend
-        run: ./gradlew build
+        run: |
+          chmod +x gradlew
+          ./gradlew build
 
 
   dependency-submission:
